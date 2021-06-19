@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "dotenv-load": "^2.0.0",
+    "next": "^11.0.0",
+    "next-env": "^1.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.11",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.1",
+    "tailwindcss": "^2.2.2",
+    "typescript": "^4.3.4"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC"
+}
