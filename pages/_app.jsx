@@ -1,12 +1,12 @@
-import react from 'react';
-import '../styles/globals.css'
+import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
+import 'remixicon/fonts/remixicon.css'
 
 
 export default function App({ Component, pageProps }) {
    return (
-       <div className="min-h-screen bg-dark p-10 sm:p-0">
-
-           <Component {...pageProps} />
-       </div>
+      <ThemeProvider attribute="class">
+         <Component {...pageProps} />
+      </ThemeProvider>
    );
 }

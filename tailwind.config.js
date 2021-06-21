@@ -1,10 +1,21 @@
-const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
+const { spacing, fontFamily, screens, fontSize } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  //  mode: 'jit',
+   mode: 'jit',
+   important: true,
    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
    darkMode: 'class',
    theme: {
+      screens: {
+         tiny: '320px',
+         xs: '500px',
+         ...screens,
+      },
+      fontSize: {
+         '10xl': ['8rem', '90px'],
+         '2sm': ['6rem', '71px'] ,
+         ...fontSize,
+      },
       extend: {
          colors: {
             dark: {
@@ -14,7 +25,7 @@ module.exports = {
             sentence: '#ffffff',
          },
          fontFamily: {
-            sans: ['Space Mono', ...fontFamily.sans],
+            sans: ['Inter', ...fontFamily.sans],
          },
          typography: (theme) => ({
             DEFAULT: {
