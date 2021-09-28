@@ -1,0 +1,38 @@
+*:focus {
+  outline: 0 !important;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #1e262f;
+}
+
+  /* Create an active/current tablink class */
+.tab button.active {
+  border-left: 1.5px solid #FCD34D;
+  outline: none;
+}
+
+  /* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+.borders{
+  border-left: 1.5px solid;
+  outline: none;
+}
+
+
+@media (max-width: 500px){
+  .tab button.active {
+    border-left: none;
+    border-bottom: 1.5px solid #FCD34D ;
+  }
+
+  .borders{
+    border-left: none;
+    border-bottom: 1.5px solid;
+  }
+}

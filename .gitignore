@@ -1,0 +1,9 @@
+node_modules
+# Keep environment variables out of version control
+*.log
+.DS_Store
+node_modules
+.next
+public/feed.xml
+.vercel
+.env
