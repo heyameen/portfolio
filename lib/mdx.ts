@@ -63,11 +63,8 @@ export async function getAllFilesFrontMatter(type) {
       join(process.cwd(), 'data', type, postSlug),
       'utf8'
     );
-    console.log('SOURCE', source)
     const { data } = matter(source);
-    console.log('DATA', data)
-    console.log('ALL POSTS', allPosts)
-
+    
     return [
       {
         ...data,
