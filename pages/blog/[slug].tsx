@@ -1,10 +1,11 @@
-import { useMemo } from 'react';
-import { getMDXComponent } from 'mdx-bundler/client';
-import { getFiles, getFileBySlug } from '../../lib/mdx';
-import { getTweets } from '../../lib/twitter';
-import components from '../../components/MDXComponent';
+import { getFileBySlug, getFiles } from '../../lib/mdx';
+
 import BlogLayout from '../../layouts/blog';
 import Tweet from '../../components/tweet';
+import components from '../../components/MDXComponent';
+import { getMDXComponent } from 'mdx-bundler/client';
+import { getTweets } from '../../lib/twitter';
+import { useMemo } from 'react';
 
 export default function Blog({ code, frontMatter, tweets }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -43,6 +44,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const post = await getFileBySlug('blog', params.slug);
   const tweets = await getTweets(post.tweetIDs);
+  console.log('TWEEET', tweets)
 
   return { props: { ...post, tweets } };
 }
