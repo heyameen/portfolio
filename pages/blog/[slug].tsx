@@ -6,12 +6,12 @@ import components from '../../components/MDXComponent';
 import BlogLayout from '../../layouts/blog';
 import Tweet from '../../components/Tweet';
 
-export default function Blog({ code, frontMatter }) {
+export default function Blog({ code, frontMatter, tweets }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
-  // const StaticTweet = ({ id }) => {
-  //   const tweet = tweets.find((tweet) => tweet.id === id);
-  //   return <Tweet {...tweet} />;
-  // };
+  const StaticTweet = ({ id }) => {
+    const tweet = tweets.find((tweet) => tweet.id === id);
+    return <Tweet {...tweet} />;
+  };
 
   return (
     <BlogLayout frontMatter={frontMatter}>
@@ -19,7 +19,7 @@ export default function Blog({ code, frontMatter }) {
         components={
           {
             ...components,
-            // StaticTweet
+            StaticTweet
           } as any
         }
       />
@@ -42,8 +42,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = await getFileBySlug('blog', params.slug);
-  // const tweets = await getTweets(post.tweetIDs);
-  console.log('POST', post)
+  const tweets = await getTweets(post.tweetIDs);
 
-  return { props: { ...post } };
+  return { props: { ...post, tweets } };
 }
