@@ -4,7 +4,7 @@ import { getFiles, getFileBySlug } from '../../lib/mdx';
 import { getTweets } from '../../lib/twitter';
 import components from '../../components/MDXComponent';
 import BlogLayout from '../../layouts/blog';
-import Tweet from '../../components/Tweet';
+import Tweet from '../../components/tweet';
 
 export default function Blog({ code, frontMatter, tweets }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
