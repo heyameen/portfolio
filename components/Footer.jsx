@@ -28,11 +28,11 @@ export default function Footer() {
               About
             </a>
           </Link>
-          <Link href="/">
+          {/* <Link href="/">
             <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">
               Newsletter
             </a>
-          </Link>
+          </Link> */}
         </div>
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://twitter.com/hey_ameen_">

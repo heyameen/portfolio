@@ -1,3 +1,6 @@
+import * as gtag from '../lib/gtag';
+
+import React, {useEffect} from 'react';
 import { format, parseISO } from 'date-fns';
 
 import Container from '../components/Container';
@@ -15,11 +18,21 @@ const discussUrl = (slug) =>
   )}`;
 
 export default function BlogLayout({ children, frontMatter }) {
+
+  useEffect(() => {
+      gtag.event({
+        action: `Blog: ${frontMatter.title}`,
+        category: "blog post",
+        label: 'Blog read',
+        value: frontMatter.title
+      })
+  }, []);
+
   return (
     <Container
       title={`${frontMatter.title} – Ameen Alade`}
       description={frontMatter.summary}
-      image={`https://leerob.io${frontMatter.image}`}
+      image={`https://portfolio-chi-sandy.vercel.app${frontMatter.image}`}
       date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
     >
