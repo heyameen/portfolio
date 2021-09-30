@@ -15,6 +15,20 @@ export default function Blog( {posts} ){
         frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
     });
     
+    const allPosts = posts
+    .sort(
+        (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
+    
+    // console.log('FILTERED BLOG POST', posts
+    // .sort(
+    //     (a, b) =>
+    //     Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    // ).filter((frontMatter) => {    
+    //     frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
+    // }))
+    
     return (
         <Container
             title="Blog – Ameen Alade"
@@ -68,12 +82,12 @@ export default function Blog( {posts} ){
                 <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
                 All Posts
                 </h3>
-                {!filteredBlogPosts.length && 
+                {searchValue && !filteredBlogPosts.length && 
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
                         No posts found.
                     </p>
                 }
-                {filteredBlogPosts.map((frontMatter) => (
+                {allPosts.map((frontMatter) => (
                     <BlogPost key={frontMatter.title} {...frontMatter} />
                 ))}
             </div>
@@ -83,6 +97,7 @@ export default function Blog( {posts} ){
 
 export async function getStaticProps() {
     const posts = await getAllFilesFrontMatter('blog');  
+    console.log('POSTS', posts)
     
     return { props: { posts }};
 }  
