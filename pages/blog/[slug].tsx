@@ -44,7 +44,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const post = await getFileBySlug('blog', params.slug);
   const tweets = await getTweets(post.tweetIDs);
-  console.log('TWEEET', tweets)
 
   return { props: { ...post, tweets } };
 }
