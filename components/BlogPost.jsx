@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import ViewCounter from './viewCounter'
+import useSWR from 'swr';
+import fetcher from '../lib/fetcher';
+import { IViews } from '../lib/types';
 
 const BlogPost = ({ title, summary, slug }) => {
     const { data } = useSWR<IViews>(`/api/views/${slug}`, fetcher);
