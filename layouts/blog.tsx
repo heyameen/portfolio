@@ -14,7 +14,7 @@ const editUrl = (slug) =>
   `https://github.com/heyameen/portfolio/edit/main/data/blog/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://ameen.dev/blog/${slug}`
+    `https://portfolio-chi-sandy.vercel.app/blog/${slug}`
   )}`;
 
 export default function BlogLayout({ children, frontMatter }) {
