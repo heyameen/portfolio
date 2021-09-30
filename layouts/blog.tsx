@@ -14,7 +14,7 @@ const editUrl = (slug) =>
   `https://github.com/heyameen/portfolio/edit/main/data/blog/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://portfolio-chi-sandy.vercel.app/blog/${slug}`
+    `https://ameenalade.dev/blog/${slug}`
   )}`;
 
 export default function BlogLayout({ children, frontMatter }) {
@@ -32,7 +32,7 @@ export default function BlogLayout({ children, frontMatter }) {
     <Container
       title={`${frontMatter.title} – Ameen Alade`}
       description={frontMatter.summary}
-      image={`https://portfolio-chi-sandy.vercel.app${frontMatter.image}`}
+      image={`https://ameenalade.dev${frontMatter.image}`}
       date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
     >
