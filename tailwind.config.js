@@ -3,7 +3,7 @@ const { spacing, fontFamily, screens, fontSize } = require('tailwindcss/defaultT
 module.exports = {
    // mode: 'jit',
    important: true,
-   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './layouts/**/*.{js,ts,jsx,tsx}'],
    darkMode: 'class',
    theme: {
       screens: {
