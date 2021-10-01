@@ -19,14 +19,14 @@ const discussUrl = (slug) =>
 
 export default function BlogLayout({ children, frontMatter }) {
 
-  useEffect(() => {
-      gtag.event({
-        action: `Blog: ${frontMatter.title}`,
-        category: "blog post",
-        label: 'Blog read',
-        value: frontMatter.title
-      })
-  }, []);
+  // useEffect(() => {
+  //     gtag.event({
+  //       action: `Blog: ${frontMatter.title}`,
+  //       category: "blog post",
+  //       label: 'Blog read',
+  //       value: frontMatter.title
+  //     })
+  // }, []);
 
   return (
     <Container
