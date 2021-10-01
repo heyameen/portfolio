@@ -40,6 +40,8 @@ const App = ({ Component, pageProps }) => {
           `,
                 }}
             /> */}
+            <script defer data-domain="ameenalade.dev" src="/js/script.js"></script>
+
             <script defer data-domain="ameenalade.dev" src="https://plausible.io/js/plausible.js"></script>
             <ThemeProvider attribute="class">
                 <Component {...pageProps} />
