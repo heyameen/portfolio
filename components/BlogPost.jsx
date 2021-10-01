@@ -1,13 +1,14 @@
+import {IViews} from '../lib/types'
 import Link from 'next/link';
-import ViewCounter from './viewCounter'
-import useSWR from 'swr';
 import fetcher from '../lib/fetcher';
-import { IViews } from '../lib/types';
+import useSWR from 'swr';
 
 const BlogPost = ({ title, summary, slug }) => {
-    const { data } = useSWR<IViews>(`/api/views/${slug}`, fetcher);
+    const { data } = useSWR(`/api/views/${slug}`, fetcher);
+
+    console.log('data', data)
     const views = data?.total;
-    
+    console.log('VIEWS', views)
     return (
         <Link href={`/blog/${slug}`}>
             <a className="w-full">

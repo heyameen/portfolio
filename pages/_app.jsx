@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }) => {
     return (
         <>
             {/* Global Site Tag (gtag.js) - Google Analytics */}
-            <Script
+            {/* <Script
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
             />
@@ -39,7 +39,8 @@ const App = ({ Component, pageProps }) => {
             });
           `,
                 }}
-            />
+            /> */}
+            <script defer data-domain="ameenalade.dev" src="https://plausible.io/js/plausible.js"></script>
             <ThemeProvider attribute="class">
                 <Component {...pageProps} />
             </ThemeProvider>

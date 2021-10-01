@@ -32,7 +32,7 @@ module.exports = {
 // https://securityheaders.com
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com cdn.usefathom.com https://tagmanager.google.com/ https://www.googletagmanager.com/;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com cdn.usefathom.com https://tagmanager.google.com/ https://www.googletagmanager.com/ https://plausible.io/;
     child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com https://tagmanager.google.com/ https://fonts.googleapis.com/;
     img-src * blob: data:;
