@@ -22,44 +22,39 @@ export default function Footer() {
         <div className="flex flex-col space-y-4">
           <Link href="/">
             <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">Home</a>
-          </Link>
-          <Link href="/about">
-            <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">
-              About
-            </a>
-          </Link>
+          </Link>        
           {/* <Link href="/">
             <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">
               Newsletter
             </a>
           </Link> */}
         </div>
+        <div className="flex flex-col space-y-4">          
+          <Link href="/about">
+            <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">
+              About
+            </a>
+          </Link>
+        </div>
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://twitter.com/hey_ameen_">
             Twitter
           </ExternalLink>
+        </div>
+        <div className="flex flex-col space-y-4">          
           <ExternalLink href="https://github.com/heyameen">GitHub</ExternalLink>          
         </div>
-        <div className="flex flex-col space-y-4">
+        {/* <div className="flex flex-col space-y-4">
           <Link href="/">
             <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">Uses</a>
           </Link>
-          {/* <Link href="/guestbook">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              Guestbook
-            </a>
-          </Link>
-          <Link href="/snippets">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              Snippets
-            </a>
-          </Link> */}
+          
           <Link href="/">
             <a className="text-black dark:text-gray-100 hover:text-gray-600 transition">
               Tweets
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

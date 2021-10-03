@@ -39,10 +39,12 @@ export default function Blog( {posts} ){
                 Blog
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {`I've been writing online since 2014, mostly about web development and tech careers.
-                    In total, I've written ${posts.length} articles on this site.
-                    Use the search below to filter by title.`}
+                
+                {`I mostly use this medium to talk about web development, tech careers and life in general.
+                    In total, I've written ${posts.length} article on this site.`
+                }
                 </p>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">Use the search below to filter by title. </p>       
                 <div className="relative w-full mb-4">
                     <input
                         aria-label="Search articles"

@@ -43,7 +43,7 @@ const Home = () => {
             <div className="w-full" id="about">
                <About />
             </div>
-            <div className="w-full">
+            <div className="w-full" id="work">
                <Work />
             </div>
             <div className="w-full">

@@ -31,8 +31,8 @@ export default function Container(props) {
             <title>{meta.title}</title>
             <meta name="robots" content="follow, index" />
             <meta content={meta.description} name="description" />
-            <meta property="og:url" content={`https://portfolio-chi-sandy.vercel.app/${router.asPath}`} />
-            <link rel="canonical" href={`https://portfolio-chi-sandy.vercel.app/${router.asPath}`} />
+            <meta property="og:url" content={`https://ameenalade.dev/${router.asPath}`} />
+            <link rel="canonical" href={`https://ameenalade.dev/${router.asPath}`} />
             <meta property="og:type" content={meta.type} />
             <meta property="og:site_name" content="Ameen Alade" />
             <meta property="og:description" content={meta.description} />
@@ -85,11 +85,11 @@ export default function Container(props) {
                <NextLink href="/">
                   <a className={router.pathname === '/' ? activeLink : inActiveLink}>Home</a>
                </NextLink>
-               <NextLink href="#about">
-                  <a className={router.pathname === '/about' ? activeLink : inActiveLink}>About</a>
+               <NextLink href="/#about">
+                  <a className={router.pathname === '/#about' ? activeLink : inActiveLink}>About</a>
                </NextLink>
-               <NextLink href="/work">
-                  <a className={router.pathname === '/work' ? activeLink : inActiveLink}>Works</a>
+               <NextLink href="/#work">
+                  <a className={router.pathname === '/#work' ? activeLink : inActiveLink}>Works</a>
                </NextLink>
                <NextLink href="/blog">
                   <a className={router.pathname === '/blog' ? activeLink : inActiveLink}>Blog</a>
