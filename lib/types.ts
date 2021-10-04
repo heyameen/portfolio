@@ -14,7 +14,7 @@ export enum Form {
     count: number;
   }
   
-  export interface IViews {
+  export interface Views {
     total: number;
   }
   
@@ -37,21 +37,10 @@ export enum Form {
     tracks: ISong[];
   }
   
-  export interface IYouTube {
-    subscriberCount: number;
-    viewCount: number;
-  }
   
   export interface IGitHub {
     stars: number;
   }
   
-  export interface IGumroad {
-    sales: number;
-  }
   
-  export interface IUnsplash {
-    downloads: number;
-    views: number;
-  }
   

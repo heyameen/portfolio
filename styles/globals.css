@@ -12,10 +12,7 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: optional;
-  src: url(/fonts/inter-var-latin.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  src: url(/fonts/inter-var-latin.woff2) format('woff2');  
 }
 
 ::selection {
@@ -234,6 +231,20 @@ table {
 
 @media (max-width: 768px){
    .hr{width: inherit; overflow: hidden}
+}
+
+.email-link {
+  color: #fcd34d;
+  background-color: transparent;
+  border: 1px solid #fcd34d;
+  border-radius: 4px;
+  padding: 1.25rem 1.75rem;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  margin-top: 50px;
 }
 
 

@@ -65,7 +65,7 @@ export default function BlogLayout({ children, frontMatter }) {
           {children}
         </div>
         
-        <div className="text-sm text-gray-700 dark:text-gray-300 mt-8">
+        <div className="text-sm text-gray-700 dark:text-gray-300 mt-20">
           <a
             href={discussUrl(frontMatter.slug)}
             target="_blank"

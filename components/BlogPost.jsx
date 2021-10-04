@@ -8,7 +8,6 @@ const BlogPost = ({ title, summary, slug }) => {
 
     console.log('data', data)
     const views = data?.total;
-    console.log('VIEWS', views)
     return (
         <Link href={`/blog/${slug}`}>
             <a className="w-full">
