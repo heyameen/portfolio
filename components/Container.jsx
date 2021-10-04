@@ -18,7 +18,7 @@ export default function Container(props) {
    const meta = {
       title: 'Ameen Alade – Developer, writer, creator.',
       description: `Front-end developer, JavaScript enthusiast, and UX maniac.`,
-      image: 'https://leerob.io/static/images/banner.png',
+      image: 'https://ameenalade.dev/static/images/banner.png',
       type: 'website',
       ...customMeta,
    };
