@@ -1,31 +1,119 @@
 ---
 title: 'Understanding Space and Time Complexity in Data Structures and Algorithm'
-publishedAt: '2021-09-27'
+publishedAt: '2021-10-04'
 summary: 'A deep-dive on everything I have learnt about space and time complexity so far in JavaScript.'
-image: '/static/images/zero/automedsys.png'
+image: '/static/images/space-time-complexity/bigOBanner.png'
 ---
-
-Space complexity in data structure and algorithm talks about how much memory is used in executing a particular algorithm.
-
-Time complexity details the number of operations executed to solve a particular problem with respect to the input size.
-
-> “How many of you have had prior programming experience?”
-
-<StaticTweet id="1443474892691755011" />
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
 
 <Image
   alt={`Banner`}
-  src={`/static/images/zero/banner.png`}
+  src={`/static/images/space-time-complexity/bigOBanner.png`}
   width={1800}
   height={1199}
 />
 
-It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+In order to understand time and space complexity, you will need to understand what an algorithm is. Algorithms are a set of steps used in solving problems. Usually, there is more than one way to solve a particular problem. The best solution or algorithm to a problem is determined by the time and resources spent in solving the problem.
+
+We refer to these two constraints (time and resources) as time complexity and resource complexity. These two constraints are crucial to recommending solutions to any computational problem.
+
+Space complexity in data structure and algorithm talks about how much `memory` is used in executing a particular algorithm.
+
+Time complexity details the `number of operations` executed to solve a particular problem with respect to input size?
+
+Both constraint gives an insight about the performance of a algorithm. On the basis of time and space complexity of a algorithm, we can get a rough idea of how efficient an algorithm is.
+
+### Big O Notation
+
+Big O notation helps us express the values of space and time complexities in a more formal way. The Big O notation is a relative metric that shows how fast execution time of the algorithm or it's consumed memory will grow depending on input size growth.
+
+
+<Image
+  alt={`Banner`}
+  src={`/static/images/space-time-complexity/bigO.jpeg`}
+  width={1800}
+  height={1199}
+/>
+
+Let's take some examples;
+
+### Constant O(1)
+``` jsx
+const people = {
+	dayo: 26,
+  jenifer: 35,
+  peter: 21,
+  james: 45
+};
+
+const getAge = name => people[name];
+```
+Let's think about how the input of the function will affect the number of operations it will accomplish. For every input, the function does exactly one operation. That would mean that time complexity of this function is: `Time Complexity: O(1)`.
+
+Now let's roughly analyze how much memory it will require to evaluate this function. In this case, the number of variables we operate with doesn't depend on the input. So the space complexity is `Space Complexity: O(1)`.
+
+### Linear O(n)
+Usually, O(1) is the best scenario, when possible, try to look for a way to use functions that have O(1) Notation. with the example underneath the circumstance changes, take a look:
+
+``` jsx
+const people = [
+  { name: 'dayo', age: 13}, 
+  { name: 'jenifer', age: 13}, 
+  { name: 'john', age: 35}, 
+  { name: 'peter', age: 21}, 
+  { name: 'james', age: 45}, 
+  { name: 'bielsa', age: 17}, 
+];
+
+const getGreaterThanAge18 = () => people.filter(person => person.age > 18); 
+```
+
+The number of operations will increase according to the number of items in the array, this complexity is known as the `O(n) or Linear`.
+
+From the perspective of space complexity, we may conclude that our fucntion won't create additional variables with a bigger array. Amount of memory it consumes does not change. So the space complexity is `O(1)`.
+
+
+### Quadratic O(n^2)
+When you create a loop in another loop you have an operation that isn't optimized like below: 
+
+``` jsx
+const printItemAndNext = (...items) =>
+items.forEach((item, index) =>
+  items.forEach(
+    (innerItem, innerIndex) =>
+      innerIndex === index + 1 && console.log(item, innerItem),
+  ),
+);
+
+/* will return: 
+  1 2
+  2 3
+  3 4
+  */
+printItemAndNext(1, 2, 3, 4);
+```
+The function excution would mean that our function will slow down proportionally to the square of numbers we will provide for it as an input.
+
+You may also notice that the more numbers we provide to the function, the more pairs it will generate. Our Time complexity for the function to execute would be `O(n^2)`. 
+
+
+### Logarithmic O(logn)
+This reduces the complexity of an operation in half for every iteration. This operation is called `O(logn) or Logarithmic`. Let's introduce a very simple algorithm to explain this;
+
+``` jsx
+function logTime(arr) {
+  let numberOfLoops = 0
+  for (let i = 1; i < arr.length; i *= 2) {
+    numberOfLoops++
+  }
+  return numberOfLoops
+}
+let loopsA = logTime([1]) // 0 loops
+let loopsB = logTime([1, 2]) // 1 loop
+let loopsC = logTime([1, 2, 3, 4]) // 2 loops
+let loopsD = logTime([1, 2, 3, 4, 5, 6, 7, 8]) // 3 loops
+let loopsE = logTime(Array(16)) // 4 loops
+
+```
+As we can see from the examples (loopsA, loopsB, etc…), every time we double the length of the input array, the number of operations increases linearly (by 1 each time).
+
+I hope this post has helped - thanks for reading.

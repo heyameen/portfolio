@@ -19,12 +19,25 @@ module.exports = {
          ...fontSize,
       },
       extend: {
+         'blue-opaque': 'rgb(13 42 148 / 18%)',
          colors: {
             dark: {
                light: '#1e262f',
                DEFAULT: '#0e141b',
             },
             sentence: '#ffffff',
+            gray: {
+               0: '#fff',
+               100: '#fafafa',
+               200: '#eaeaea',
+               300: '#d1d5db',
+               400: '#9ca3af',
+               500: '#6b7280',
+               600: '#444444',
+               700: '#333333',
+               800: '#1f2937',
+               900: '#0e141b',
+            }
          },
          fontFamily: {
             sans: ['Inter', ...fontFamily.sans],
@@ -32,7 +45,7 @@ module.exports = {
          typography: (theme) => ({
             DEFAULT: {
                css: {
-                  color: theme('colors.gray.700'),
+                  color: theme('colors.gray.00'),
                   a: {
                      color: theme('colors.blue.500'),
                      '&:hover': {
