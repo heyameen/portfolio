@@ -21,7 +21,7 @@ const project = [
         name: 'Todo',
         description: 'Todo is a feature-rich to-do application that helps users keep track of their tasks efficiently.',
         img: 'todo.png',
-        url: 'https://tunez-4yjx0d3ti-heyameen.vercel.app/',
+        url: 'https://todo-nine-tau.vercel.app/',
         github: 'https://github.com/heyameen/todo',
         technologies: ['React', 'Redux', 'JavaScript', 'SCSS'],
     },
