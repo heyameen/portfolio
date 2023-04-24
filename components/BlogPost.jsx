@@ -6,7 +6,6 @@ import useSWR from 'swr';
 const BlogPost = ({ title, summary, slug }) => {
     const { data } = useSWR(`/api/views/${slug}`, fetcher);
 
-    console.log('data', data)
     const views = data?.total;
     return (
         <Link href={`/blog/${slug}`}>

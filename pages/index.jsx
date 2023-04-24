@@ -31,13 +31,19 @@ const Home = () => {
                     </div>
                     <div className="flex justify-between w-24 mt-8 h-auto">
                         <span className="text-gray-900 dark:text-yellow-300 hover:text-yellow-300 dark:hover:text-white text-2xl cursor-pointer">
-                            <i className="ri-linkedin-fill"></i>
+                            <a href="https://www.linkedin.com/in/ameen-alade-7643b5b9/">
+                                <i className="ri-linkedin-fill"></i>
+                            </a>
                         </span>
                         <span className="text-gray-900 dark:text-yellow-300 hover:text-yellow-300 dark:hover:text-white text-2xl cursor-pointer">
-                            <i className="ri-github-fill"></i>
+                            <a href="https://github.com/heyameen">
+                                <i className="ri-github-fill"></i>
+                            </a>
                         </span>
                         <span className="text-gray-900 dark:text-yellow-300 hover:text-yellow-300 dark:hover:text-white text-2xl cursor-pointer">
-                            <i className="ri-twitter-fill"></i>
+                            <a href="https://twitter.com/hey_ameen_">
+                                <i className="ri-twitter-fill"></i>
+                            </a>
                         </span>
                     </div>
                 </div>
@@ -74,10 +80,17 @@ const Home = () => {
                 <div className="w-full py-32 flex flex-col justify-center items-center">
                     <SectionHeader header="Get In Touch" hr="none" align="center" />
                     <p className="text-black dark:text-gray-200 text-center max-w-md">
-                        Although I’m not currently looking for any new opportunities, my inbox is always open. Whether
-                        you have a question or just want to say hi, I’ll try my best to get back to you!
+                        I'm excited to connect with you! If you have any questions or just want to chat, feel free to
+                        drop me a message. I'd be happy to hear from you and will do my best to respond promptly.
                     </p>
-                    <a className="email-link" href="mailto:ameenalade@gmail.com" rel="noopener noreferrer" target="_blank">Say Hello</a>
+                    <a
+                        className="email-link"
+                        href="mailto:ameenalade@gmail.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        Say Hello
+                    </a>
                 </div>
             </div>
         </Container>

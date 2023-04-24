@@ -40,7 +40,7 @@ module.exports = {
             }
          },
          fontFamily: {
-            sans: ['Inter', ...fontFamily.sans],
+            sans: ['Inter'],
          },
          typography: (theme) => ({
             DEFAULT: {

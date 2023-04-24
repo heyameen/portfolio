@@ -27,7 +27,7 @@ const Project = ({ work }) => {
                         </ul>
                         <div className="project-links text-gray-600     dark:text-gray-200">
                            <a
-                              href={project.github === '' ? '#' : null}
+                              href={project.github}
                               aria-label="GitHub Link"
                               rel="noopener noreferrer"
                               target="_blank"

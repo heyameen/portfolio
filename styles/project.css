@@ -219,6 +219,12 @@ img, .image-wrapper {
         padding: 40px 40px 30px;
         text-align: left;
     }
+
+    .list .project-content{
+        grid-column: 1 / -1;
+        padding: 40px 40px 30px;
+        text-align: left;
+    }
     
     .list .project-title {
         color: white;
