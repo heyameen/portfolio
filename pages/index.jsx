@@ -30,7 +30,7 @@ const Home = () => {
                 <div className="flex mb-16 w-full flex-col justify-center height">
                     <div className="flex justify-center items-start flex-col tiny:mt-24 xs:mt-0">
                         <h1 className="font-bold tiny:font-semibold xs:text-10xl tiny:text-2sm  tracking-tight mb-4 text-black dark:text-white header-text">
-                            Ameen Alade.
+                            {/* Ameen Alade. */}
                         </h1>
                     </div>
                     <div className="flex justify-start items-start flex-col w-full">
