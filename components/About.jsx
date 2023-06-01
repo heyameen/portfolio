@@ -1,13 +1,15 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionHeader from './SectionHeader';
+import aboutAnimation from '../lib/gsap/aboutAnimation';
 
 const About = () => {
+    
     return (
-        <div className="flex items-center justify-between mb-8 tiny:flex-col md:flex-row py-28">
+        <div className="flex items-center justify-between mb-8 tiny:flex-col md:flex-row py-28 about-me">
             <div className="md:w-3/5 tiny:w-full">
                 <SectionHeader header="About Me" align="center" hr="true" />
-                <div className="mb-8 leading-6 text-gray-600 dark:text-gray-200">
+                <div className="mb-8 leading-6 text-gray-600 dark:text-gray-200 about-text">
                     <p>
                         Hi! I'm Ameen. I'm a developer, writer and a UX enthusiast with over 5 years of experience
                         building and designing simple human interfaces. I am currently seeking new opportunities to make
@@ -32,7 +34,7 @@ const About = () => {
                     </ul>
                 </div>
             </div>
-            <div className="profile-img relative rounded bg-yellow-300 hover:bg-transparent z-20 hover:mix-blend-normal">
+            <div className="profile-img relative rounded bg-yellow-300 hover:bg-transparent z-20 hover:mix-blend-normal about-img">
                 <Image
                     className="rounded mix-blend-multiply overflow-hidden z-10"
                     src="/static/images/ameen2.jpg"

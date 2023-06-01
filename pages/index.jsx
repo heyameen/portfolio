@@ -12,18 +12,27 @@ import project from '../data/Project';
 import headerAnimation from './../lib/gsap/headerAnimation';
 import subHeadingAnimation from '../lib/gsap/subHeadingAnimation';
 import headerParagraphAnimation from './../lib/gsap/headerParagraphAnimation';
+import aboutAnimation from '../lib/gsap/aboutAnimation';
 import iconsAnimation from './../lib/gsap/iconsAnimation';
 
 const Home = () => {
     useEffect(() => {
-        const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
+        const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' }});
 
         tl.add(headerAnimation());
         tl.add(subHeadingAnimation(), '-=0.5');
         tl.add(headerParagraphAnimation(), '-=0.5');
         tl.add(iconsAnimation(), '-=0.5');
+        // tl.add(aboutAnimation(), '-=0.9');
+
+        // tl({ onComplete: aboutAnimation });
+
     }, []);
 
+    useEffect(() => {
+        aboutAnimation();
+    }, []);
+    
     return (
         <Container>
             <div className="flex flex-col justify-center items-start max-w-4xl mx-auto mb-16 w-full">
