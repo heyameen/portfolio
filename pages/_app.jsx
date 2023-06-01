@@ -2,6 +2,8 @@ import '../styles/globals.css';
 import 'remixicon/fonts/remixicon.css';
 
 import * as gtag from '../lib/gtag';
+// Supports weights 100-900
+import '@fontsource-variable/inter';
 
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
