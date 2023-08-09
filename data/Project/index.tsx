@@ -13,7 +13,7 @@ const project = [
         description:
             'Tunez is a web music player that allows users to play and manage their music playlist seamlessly. Although, it is yet to be fully functional. The login details are username: ameen@test.com & password: password',
         img: 'tunez.png',
-        url: 'https://tunez-4yjx0d3ti-heyameen.vercel.app/',
+        url: 'https://tunez.vercel.app/',
         github: 'https://github.com/heyameen/tunez',
         technologies: ['NextJS', 'Chakra UI', 'Prisma', 'PostgreSQL'],
     },
