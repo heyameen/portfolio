@@ -13,8 +13,7 @@ const About = () => {
                     <p>
                         Hi! I'm Ameen. I'm a developer, writer and a UX enthusiast with over 5 years of experience
                         building and designing simple human interfaces. I am currently seeking new opportunities to make
-                        an impact. Although, I must disclose that my availability at the moment is limited to part-time
-                        work.
+                        to contribute to the success of forward-thinking companies.
                     </p>
                     <p className="mt-6">
                         My passion for web development sparked back in 2015, when I embarked on my first programming
